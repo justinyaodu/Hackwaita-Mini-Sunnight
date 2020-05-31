@@ -4,8 +4,8 @@
 
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant=='dark', '-dark', '');
-$backdrop_transition: 200ms ease-out;
-$button_transition: all 200ms $ease-out-quad;
+$backdrop_transition: none; // 200ms ease-out;
+$button_transition: none; // all 200ms $ease-out-quad;
 $button_radius: 5px;
 $menu_radius: 5px;
 $window_radius: $button_radius + 3;
@@ -321,7 +321,7 @@ entry {
     padding-right: 8px;
     border: 1px solid;
     border-radius: $button_radius;
-    transition: all 200ms $ease-out-quad;
+    transition: none; // all 200ms $ease-out-quad;
 
     @include entry(normal);
 
@@ -2639,7 +2639,7 @@ scrollbar {
   }
 
   background-color: $scrollbar_bg_color;
-  transition: 300ms $ease-out-quad;
+  transition: none; // 300ms $ease-out-quad;
 
   // scrollbar border
   &.top { border-bottom: 1px solid $borders_color; }
@@ -2937,7 +2937,7 @@ switch {
     background-color: #{$check_background};
     border-radius: 5px;
     background-image: none;
-    transition: 200ms;
+    transition: none; // 200ms;
     box-shadow: none;
     border-width: 0;
     -gtk-icon-source: #{$check_icon};
@@ -3084,7 +3084,7 @@ check {
 
   &:checked:not(:backdrop), &:indeterminate:not(:backdrop) {
     -gtk-icon-transform: unset;
-    transition: 400ms;
+    transition: none; // 400ms;
   }
 }
 
@@ -3832,7 +3832,7 @@ list {
 }
 
 row {
-  transition: all 150ms $ease-out-quad;
+  transition: none; // all 150ms $ease-out-quad;
 
   &:hover { transition: none; }
 
@@ -4170,12 +4170,12 @@ placessidebar {
 
 placesview {
   .server-list-button > image {
-    transition: 200ms $ease-out-quad;
+    transition: none; // 200ms $ease-out-quad;
     -gtk-icon-transform: rotate(0turn);
   }
 
   .server-list-button:checked > image {
-    transition: 200ms $ease-out-quad;
+    transition: none; // 200ms $ease-out-quad;
     -gtk-icon-transform: rotate(-0.5turn);
   }
 
