@@ -1,6 +1,7 @@
-# Hackwaita
+# Hackwaita-Mini
 
-A more hackable copy of the Adwaita GTK theme. Modified from [here](https://gitlab.gnome.org/GNOME/gtk/-/tree/gtk-3-24/gtk/theme/Adwaita).
+A fork of [Hackwaita](https://github.com/justinyaodu/Hackwaita) with the following changes:
 
-* Build in-place (use repository root as the GTK theme directory)
-* More documentation?
+* Compact button and widget styles
+* No animations (CSS `transition: none`)
+* Window styles don't change when a window loses focus
