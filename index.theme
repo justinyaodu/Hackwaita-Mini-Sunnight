@@ -1,8 +1,8 @@
 [X-GNOME-Metatheme]
-Name=Hackwaita
+Name=Hackwaita-Mini
 Comment=There are more
 Encoding=UTF-8
-GtkTheme=Hackwaita
-IconTheme=Adwaita
+GtkTheme=Hackwaita-Mini
+IconTheme=Hackwaita-Mini
 CursorTheme=Adwaita
 CursorSize=24
