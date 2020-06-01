@@ -1,126 +1,125 @@
 // When color definition differs for dark and light variant
 // it gets @if ed depending on $variant
 
+@import 'sunnight-colors';
 
 // Firefox address bar and menu background.
 // File dialog file list background.
-$base_color: if($variant == 'light', #ffffff, lighten(desaturate(#241f31, 100%), 2%));
+$base_color: $sn_black;
 
 // Firefox address bar text.
 // File dialog file list text, breadcrumb text.
-$text_color: if($variant == 'light', black, white);
+$text_color: $sn_white;
 
 // Firefox tab background.
 // File dialog breadcrumb, bottom pane, buttons.
-$bg_color: if($variant == 'light', #f6f5f4, darken(desaturate(#3d3846, 100%), 4%));
+$bg_color: $sn_dark_gray;
 
 // Firefox tab text, icon colors.
-$fg_color: if($variant == 'light', #2e3436, #eeeeec);
+$fg_color: $sn_white;
 
 // File dialog selected file text.
-$selected_fg_color: #ffffff;
+$selected_fg_color: $sn_black;
 
 // Firefox active tab accent, highlights, etc.
 // File dialog selected file background.
-$selected_bg_color: if($variant == 'light', #3584e4, darken(#3584e4, 20%));
+$selected_bg_color: $sn_bright_accent;
 
 // Nautilus file rename: text box "halo"
-$selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
+$selected_borders_color: $sn_bright_accent;
 
 // Firefox bottom edge of top bar, address bar highlight when not focused.
 // File dialog button borders.
-$borders_color: if($variant == 'light', darken($bg_color, 18%), darken($bg_color, 10%));
+$borders_color: $sn_gray;
 
 // Bottom edge of inactive file dialog breadcrumbs.
-$alt_borders_color: if($variant == 'light', darken($bg_color, 24%), darken($bg_color, 18%));
+$alt_borders_color: $borders_color;
 
 // Unknown (referenced by $top_hilight).
-$borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+$borders_edge: $borders_color;
 
 // Firefox search bar dropdown selection URLs.
-$link_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 20%));
+$link_color: $sn_bright_accent;
 
 // Unknown.
-$link_visited_color: if($variant == 'light', darken($selected_bg_color, 20%), lighten($selected_bg_color, 10%));
+$link_visited_color: $sn_accent;
 
 // Window top highlight.
 $top_hilight: $borders_edge;
 
 // Nautilus tab background (also tab background in prefs dialog).
-$dark_fill: mix($borders_color, $bg_color, 50%);
+$dark_fill: $bg_color;
 
 // Border around Nautilus window?
-$headerbar_color: if($variant == 'light', lighten($bg_color, 5%), darken($bg_color, 3%));
+$headerbar_color: $bg_color;
 
 // Background used for application menus (File, Edit, etc.)
-$menu_color: if($variant == 'light', $base_color, mix($bg_color, $base_color, 20%));
+$menu_color: $base_color;
 
 // Popover containers (e.g. Nautilus view options)
 $popover_bg_color: $bg_color;
-$popover_hover_color: lighten($bg_color, 5%);
+$popover_hover_color: $popover_bg_color;
 
 // Scrollbar.
-$scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, 80%), mix($base_color, $bg_color, 50%));
-$scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
-$scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
-$scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
+$scrollbar_bg_color: $base_color;
+$scrollbar_slider_color: $sn_gray;
+$scrollbar_slider_hover_color: $sn_silver;
+$scrollbar_slider_active_color: $selected_bg_color;
 
 // Operation status colors?
-$warning_color: #f57900;
-$error_color: #cc0000;
-$success_color: if($variant == 'light', #33d17a, darken(#33d17a, 10%));
-$destructive_color: if($variant == 'light', #e01b24, darken(#e01b24, 10%));
-
-// On screen display notifications?
-$osd_fg_color: #eeeeec;
-$osd_text_color: white;
-$osd_bg_color: if($variant == 'light', transparentize(darken(desaturate(#3d3846, 100%), 4%),0.1), transparentize(darken(desaturate(#3d3846, 100%), 10%),0.1));
-$osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
-$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
-$osd_borders_color: transparentize(black, 0.3);
-
-// Sidebar background (seems to only be used when window loses focus).
-$sidebar_bg_color: mix($bg_color, $base_color, 50%);
-
-// Unknown.
-$base_hover_color: transparentize($fg_color, 0.95);
-
-// Tooltip borders.
-$tooltip_borders_color: transparentize(white, 0.9);
-
-// Nautilus top bar button shadows.
-$shadow_color: transparentize(black, 0.9);
-
-// Highlight for areas about to be drag-and-dropped onto.
-// E.g. Nautilus breadcrumb.
-$drop_target_color: #4e9a06;
+$warning_color: $sn_bright_yellow;
+$error_color: $sn_bright_red;
+$success_color: $sn_bright_green;
+$destructive_color: $sn_bright_red;
 
 // Colors for disabled objects.
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 $insensitive_borders_color: $borders_color;
 
+// On screen display notifications?
+$osd_fg_color: $fg_color;
+$osd_text_color: $text_color;
+$osd_bg_color: $bg_color;
+$osd_insensitive_bg_color: $bg_color;
+$osd_insensitive_fg_color: $insensitive_fg_color;
+$osd_borders_color: $borders_color;
+
+// Sidebar background (seems to only be used when window loses focus).
+$sidebar_bg_color: $bg_color;
+
+// Unknown.
+$base_hover_color: $bg_color;
+
+// Tooltip borders.
+$tooltip_borders_color: transparent;
+
+// Nautilus top bar button shadows.
+$shadow_color: transparent;
+
+// Highlight for areas about to be drag-and-dropped onto.
+// E.g. Nautilus breadcrumb.
+$drop_target_color: $selected_bg_color;
+
 // Colors for windows in the backdrop state (top level, not focused).
-$backdrop_base_color: if($variant == 'light', darken($base_color, 1%), lighten($base_color, 1%));
-$backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
+$backdrop_base_color: $base_color;
+$backdrop_text_color: $text_color;
 $backdrop_bg_color: $bg_color;
-$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 50%);
-$backdrop_insensitive_color: if($variant == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
-$backdrop_selected_fg_color: if($variant == 'light', $backdrop_base_color, $backdrop_text_color);
-$backdrop_borders_color: mix($borders_color, $bg_color, 80%);
-$backdrop_dark_fill: mix($backdrop_borders_color, $backdrop_bg_color, 35%);
-$backdrop_sidebar_bg_color: mix($backdrop_bg_color, $backdrop_base_color, 50%);
-
-$backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
-$backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40%);
-
-$backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
+$backdrop_fg_color: $fg_color;
+$backdrop_insensitive_color: $insensitive_fg_color;
+$backdrop_selected_fg_color: $selected_fg_color;
+$backdrop_borders_color: $borders_color;
+$backdrop_dark_fill: $dark_fill;
+$backdrop_sidebar_bg_color: $sidebar_bg_color;
+$backdrop_scrollbar_bg_color: $scrollbar_bg_color;
+$backdrop_scrollbar_slider_color: $scrollbar_slider_color;
+$backdrop_menu_color: $menu_color;
 
 // Special cased widget colors.
 $suggested_bg_color: $selected_bg_color;
 $suggested_border_color: $selected_borders_color;
 $progress_bg_color: $selected_bg_color;
 $progress_border_color: $selected_borders_color;
-$checkradio_bg_color: if($variant == 'light', $selected_bg_color, lighten($selected_bg_color,10%));
+$checkradio_bg_color: $selected_bg_color;
 $checkradio_fg_color: $selected_fg_color;
-$checkradio_borders_color: if($variant == 'light', darken($checkradio_bg_color,20%), darken($checkradio_bg_color,40%));
+$checkradio_borders_color: $borders_color;
