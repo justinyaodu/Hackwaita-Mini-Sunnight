@@ -496,7 +496,7 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 .inline-toolbar, searchbar > revealer > box, .location-bar { border-style: solid; border-color: #777777; background-color: #3c3c3c; /* &:backdrop { border-color: $backdrop_borders_color; background-color: $backdrop_dark_fill; box-shadow: none; transition: $backdrop_transition; } */ }
 
 /*************** Header bars * */
-.titlebar:not(headerbar), headerbar { padding: 0 6px; min-height: 40px; border-width: 0 0 1px; border-style: solid; border-color: #777777; border-radius: 0; background: #090909 linear-gradient(to top, #030303, #0b0b0b); box-shadow: inset 0 1px #777777; /* &:backdrop { border-color: $backdrop_borders_color; background-color: $bg_color; background-image: none; box-shadow: inset 0 1px $top_hilight; transition: $backdrop_transition; } */ /* Darken switchbuttons for headerbars. issue #1588 */ /* hide the close button separator */ }
+.titlebar:not(headerbar), headerbar { padding: 0 6px; min-height: 40px; border-width: 0 0 1px; border-style: solid; border-color: #777777; border-radius: 0; background-color: #222222; /* &:backdrop { border-color: $backdrop_borders_color; background-color: $bg_color; background-image: none; box-shadow: inset 0 1px $top_hilight; transition: $backdrop_transition; } */ /* Darken switchbuttons for headerbars. issue #1588 */ /* hide the close button separator */ }
 
 .titlebar:not(headerbar) .title, headerbar .title { padding-left: 12px; padding-right: 12px; font-weight: bold; }
 
