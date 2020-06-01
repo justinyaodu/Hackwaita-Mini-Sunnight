@@ -1341,7 +1341,7 @@ filechooser #pathbarbox { border-bottom: 1px solid #222222; }
 filechooserbutton:drop(active) { box-shadow: none; border-color: transparent; }
 
 /*********** Sidebar * */
-.sidebar { border-style: none; background-color: #111111; /* &:backdrop { background-color: $backdrop_sidebar_bg_color; border-color: $backdrop_borders_color; transition: $backdrop_transition; } */ }
+.sidebar { border-style: none; background-color: #222222; /* &:backdrop { background-color: $backdrop_sidebar_bg_color; border-color: $backdrop_borders_color; transition: $backdrop_transition; } */ }
 
 stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:not(separator):dir(ltr), .sidebar.left:not(separator) { border-right: 1px solid #777777; border-left-style: none; }
 
